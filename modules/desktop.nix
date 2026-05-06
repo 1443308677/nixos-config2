@@ -10,15 +10,10 @@
   # 图形服务器配置
   # ------------------------------
   services.xserver.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
-  services.displayManager.defaultSession = "niri";
+  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.wayland = true;
+  services.desktopManager.gnome.enable = true;
   services.accounts-daemon.enable = true;
-
-  # ------------------------------
-  # Niri 窗口管理器配置
-  # ------------------------------
-  programs.niri.enable = true;
 
   # ------------------------------
   # 音频系统配置
