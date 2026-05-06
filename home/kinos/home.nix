@@ -241,11 +241,11 @@
     # 空闲管理服务（自动锁屏）
     swayidle = {
       enable = true;
-      events = [
-        { event = "timeout"; time = 300; command = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'"; }
-        { event = "timeout"; time = 600; command = "${pkgs.systemd}/bin/loginctl suspend"; }
-        { event = "resume"; command = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'"; }
-      ];
+      events = {
+        timeout-300 = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'";
+        timeout-600 = "${pkgs.systemd}/bin/loginctl suspend";
+        after-resume = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'";
+      };
     };
 
     # Polkit GNOME 权限管理
