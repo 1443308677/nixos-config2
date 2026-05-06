@@ -38,8 +38,8 @@
       "https://cache.nixos.org"
     ];
 
-    # 允许预构建的二进制缓存签名
-    trustedPublicKeys = [
+    # 允许预构建的二进制缓存签名（新版 NixOS 使用 binaryCachePublicKeys）
+    binaryCachePublicKeys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     ];
   };
