@@ -9,11 +9,16 @@
   # ------------------------------
   # 图形服务器配置
   # ------------------------------
-  services.xserver.enable = true;              # 启用 X Window 系统
-  services.displayManager.gdm.enable = true;   # 启用 GDM 显示管理器
-  services.displayManager.gdm.wayland = true;  # GDM 使用 Wayland 协议
-  services.desktopManager.gnome.enable = true; # 启用 GNOME 桌面环境
-  services.accounts-daemon.enable = true;      # 启用账户管理守护进程
+  services.xserver.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
+  services.displayManager.defaultSession = "niri";
+  services.accounts-daemon.enable = true;
+
+  # ------------------------------
+  # Niri 窗口管理器配置
+  # ------------------------------
+  programs.niri.enable = true;
 
   # ------------------------------
   # 音频系统配置
