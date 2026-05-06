@@ -17,7 +17,7 @@
   # ------------------------------
   # Niri 窗口管理器配置
   # ------------------------------
-  services.displayManager.defaultSession = "niri";
+  services.xserver.windowManager.niri.enable = true;
 
   # ------------------------------
   # 音频系统配置
