@@ -12,8 +12,12 @@
   services.xserver.enable = true;              # 启用 X Window 系统
   services.displayManager.gdm.enable = true;   # 启用 GDM 显示管理器
   services.displayManager.gdm.wayland = true;  # GDM 使用 Wayland 协议
-  services.desktopManager.gnome.enable = true; # 启用 GNOME 桌面环境
   services.accounts-daemon.enable = true;      # 启用账户管理守护进程
+
+  # ------------------------------
+  # Niri 窗口管理器配置
+  # ------------------------------
+  services.displayManager.defaultSession = "niri";
 
   # ------------------------------
   # 音频系统配置
