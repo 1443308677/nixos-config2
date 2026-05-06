@@ -17,12 +17,7 @@
   home.homeDirectory = "/home/kinos";   # 用户主目录路径
   home.stateVersion = "25.11";          # Home Manager 状态版本
 
-  # Nixpkgs 配置
-  nixpkgs = {
-    config = {
-      allowUnfree = true;               # 允许安装非自由软件包
-    };
-  };
+  # Nixpkgs 配置（在 flake.nix 的 nixConfig 中全局设置）
 
   # 启用 Home Manager 自管理
   programs.home-manager.enable = true;
@@ -61,13 +56,13 @@
   # ------------------------------
   programs.git = {
     enable = true;                       # 启用 Git 配置
-    userName = "1443308677";            # Git 用户名
-    userEmail = "1443308677@qq.com";    # Git 邮箱
-    extraConfig = {
+    settings = {
       init.defaultBranch = "main";       # 默认分支名为 main
       core.editor = "hx";                # 默认编辑器为 Helix
       pull.rebase = true;                # Pull 时使用 rebase 模式
     };
+    userName = "1443308677";            # Git 用户名
+    userEmail = "1443308677@qq.com";    # Git 邮箱
   };
 
   # ------------------------------
@@ -97,7 +92,7 @@
       {
         name = "nix";                    # Nix 语言配置
         auto-format = true;              # 自动格式化
-        formatter.command = "${pkgs.nixfmt-classic}/bin/nixfmt";  # 使用 nixfmt 格式化
+        formatter.command = "${pkgs.nixfmt}/bin/nixfmt";  # 使用 nixfmt 格式化
       }
     ];
   };
@@ -135,7 +130,7 @@
       tab_bar_style = "powerline";       # 标签栏样式
       tab_powerline_style = "slanted";   # Powerline 样式为斜角
     };
-    theme = "Catppuccin-Mocha";          # 使用 Catppuccin Mocha 主题
+    theme = "catppuccin-mocha";          # 使用 Catppuccin Mocha 主题
   };
 
   # ------------------------------
