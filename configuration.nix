@@ -7,6 +7,7 @@
 
 {
   imports = [
+    ./hardware-configuration.nix  # 硬件配置（必须放在最后，以便覆盖其他配置）
     ./modules/boot.nix
     ./modules/networking.nix
     ./modules/localization.nix
