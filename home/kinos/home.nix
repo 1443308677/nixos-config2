@@ -60,9 +60,9 @@
       init.defaultBranch = "main";       # 默认分支名为 main
       core.editor = "hx";                # 默认编辑器为 Helix
       pull.rebase = true;                # Pull 时使用 rebase 模式
+      user.name = "1443308677";          # Git 用户名
+      user.email = "1443308677@qq.com";  # Git 邮箱
     };
-    userName = "1443308677";            # Git 用户名
-    userEmail = "1443308677@qq.com";    # Git 邮箱
   };
 
   # ------------------------------
@@ -130,7 +130,7 @@
       tab_bar_style = "powerline";       # 标签栏样式
       tab_powerline_style = "slanted";   # Powerline 样式为斜角
     };
-    theme = "Catppuccin-Mocha";
+    themeFile = "Catppuccin-Mocha";
   };
 
   # ------------------------------
