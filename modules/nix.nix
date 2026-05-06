@@ -31,16 +31,16 @@
       
       # 启用实验性功能
       experimental-features = [ "nix-command" "flakes" ];
+
+      # 二进制缓存配置
+      substituters = [
+        "https://cache.nixos.org"
+      ];
+
+      # 允许预构建的二进制缓存签名
+      trusted-public-keys = [
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      ];
     };
-
-    # 二进制缓存配置
-    binaryCaches = [
-      "https://cache.nixos.org"
-    ];
-
-    # 允许预构建的二进制缓存签名（新版 NixOS 使用 binaryCachePublicKeys）
-    binaryCachePublicKeys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-    ];
   };
 }
