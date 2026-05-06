@@ -130,7 +130,7 @@
       tab_bar_style = "powerline";       # 标签栏样式
       tab_powerline_style = "slanted";   # Powerline 样式为斜角
     };
-    theme = "catppuccin-mocha";          # 使用 Catppuccin Mocha 主题
+    themeFile = "${pkgs.kitty-themes}/share/kitty-themes/themes/catppuccin-mocha.conf";  # 使用 Catppuccin Mocha 主题
   };
 
   # ------------------------------
