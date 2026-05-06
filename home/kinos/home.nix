@@ -242,8 +242,8 @@
     swayidle = {
       enable = true;
       events = {
-        timeout-300 = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'";
-        timeout-600 = "${pkgs.systemd}/bin/loginctl suspend";
+        lock = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'";
+        before-sleep = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'";
         after-resume = "${pkgs.swaylock}/bin/swaylock -c '#1e1e2e'";
       };
     };
