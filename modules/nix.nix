@@ -26,9 +26,6 @@
       # 构建日志大小限制
       log-lines = 10000;
       
-      # 允许使用非自由软件包（系统级）
-      allow-unfree = true;
-      
       # 启用实验性功能
       experimental-features = [ "nix-command" "flakes" ];
 
